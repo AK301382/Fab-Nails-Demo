@@ -46,7 +46,7 @@ export default defineConfig({
   },
 },
 preview: {
-  allowedHosts: ["naill-frontend-production.up.railway.app"]
+  allowedHosts: ["fab-nails-demo-production.up.railway.app"]
 },
   build: {
     outDir: 'build',

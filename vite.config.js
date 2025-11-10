@@ -36,20 +36,18 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
-    host: '0.0.0.0',
-    allowedHosts: [
-      'fast-vite-dev.preview.emergentagent.com',
-      '.emergentagent.com',
-      'localhost',
-    ],
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8001',
-        changeOrigin: true,
-      },
+  port: 8080,
+  host: '0.0.0.0',
+  proxy: {
+    '/api': {
+      target: 'https://fab-nail-production.up.railway.app',
+      changeOrigin: true,
     },
   },
+},
+preview: {
+  allowedHosts: ["naill-frontend-production.up.railway.app"]
+},
   build: {
     outDir: 'build',
     sourcemap: false,
